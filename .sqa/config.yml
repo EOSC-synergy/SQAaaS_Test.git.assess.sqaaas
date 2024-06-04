@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/mattiaBarbo/SQAaaS_Test:
+      branch: main
+      repo: https://github.com/mattiaBarbo/SQAaaS_Test.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/mattiaBarbo/SQAaaS_Test git:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-cerise-akita.sh
+        container: qc.acc_wheezy-cardinal-bat
+  QC.Doc:
+    repos:
+      github.com/mattiaBarbo/SQAaaS_Test find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-eggplant-wrasse.sh
+        container: qc.doc_snoopy-saffron-raccoon
+      github.com/mattiaBarbo/SQAaaS_Test git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gamy-tangerine-caiman.sh
+        container: qc.doc_sleazy-amethyst-swan
+      github.com/mattiaBarbo/SQAaaS_Test markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-lilac-gibbon.sh
+        container: qc.doc_cheeky-dandelion-kiwi
+  QC.Lic:
+    repos:
+      github.com/mattiaBarbo/SQAaaS_Test licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.nerdy-violet-discus.sh
+        container: qc.lic_greasy-sapphire-tzu
+  QC.Sec:
+    repos:
+      github.com/mattiaBarbo/SQAaaS_Test bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-peach-buffalo.sh
+        container: qc.sec_goopy-brown-seahorse
+  QC.Sty:
+    repos:
+      github.com/mattiaBarbo/SQAaaS_Test flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-crimson-mongoose.sh
+        container: qc.sty_thirsty-tangerine-coati
+  QC.Uni:
+    repos:
+      github.com/mattiaBarbo/SQAaaS_Test pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.flabby-bronze-tarantula.sh
+        container: qc.uni_nerdy-xanthic-ibis
+  QC.Ver:
+    repos:
+      github.com/mattiaBarbo/SQAaaS_Test get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.flabby-pear-hyrax.sh
+        container: qc.ver_surly-wheat-albatross
+timeout: 5400
