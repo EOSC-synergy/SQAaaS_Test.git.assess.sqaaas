@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/mattiaBarbo/SQAaaS_Test git:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-cerise-akita.sh
-        container: qc.acc_wheezy-cardinal-bat
+        - /usr/bin/env sh .sqa/script.slaphappy-pear-hound.sh
+        container: qc.acc_muggy-amethyst-whale
   QC.Doc:
     repos:
       github.com/mattiaBarbo/SQAaaS_Test find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-eggplant-wrasse.sh
-        container: qc.doc_snoopy-saffron-raccoon
+        - /usr/bin/env sh .sqa/script.woozy-jade-fox.sh
+        container: qc.doc_lovely-goldenrod-shrew
       github.com/mattiaBarbo/SQAaaS_Test git:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-tangerine-caiman.sh
-        container: qc.doc_sleazy-amethyst-swan
+        - /usr/bin/env sh .sqa/script.lumpy-olivine-snake.sh
+        container: qc.doc_scanty-firebrick-lemur
       github.com/mattiaBarbo/SQAaaS_Test markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-lilac-gibbon.sh
-        container: qc.doc_cheeky-dandelion-kiwi
+        - /usr/bin/env sh .sqa/script.cheeky-azure-devil.sh
+        container: qc.doc_grumpy-wisteria-cuscus
   QC.Lic:
     repos:
       github.com/mattiaBarbo/SQAaaS_Test licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-violet-discus.sh
-        container: qc.lic_greasy-sapphire-tzu
+        - /usr/bin/env sh .sqa/script.tasty-chartreuse-tortoise.sh
+        container: qc.lic_muzzy-green-barnacle
   QC.Sec:
     repos:
       github.com/mattiaBarbo/SQAaaS_Test bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-peach-buffalo.sh
-        container: qc.sec_goopy-brown-seahorse
+        - /usr/bin/env sh .sqa/script.queasy-emerald-opossum.sh
+        container: qc.sec_nerdy-orchid-cat
   QC.Sty:
     repos:
       github.com/mattiaBarbo/SQAaaS_Test flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-crimson-mongoose.sh
-        container: qc.sty_thirsty-tangerine-coati
+        - /usr/bin/env sh .sqa/script.freaky-indigo-buffalo.sh
+        container: qc.sty_nerdy-zucchini-buzzard
   QC.Uni:
     repos:
       github.com/mattiaBarbo/SQAaaS_Test pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-bronze-tarantula.sh
-        container: qc.uni_nerdy-xanthic-ibis
+        - /usr/bin/env sh .sqa/script.dorky-saffron-moose.sh
+        container: qc.uni_nerdy-viridian-flounder
   QC.Ver:
     repos:
       github.com/mattiaBarbo/SQAaaS_Test get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-pear-hyrax.sh
-        container: qc.ver_surly-wheat-albatross
+        - /usr/bin/env sh .sqa/script.craggy-goldenrod-frigatebird.sh
+        container: qc.ver_hilly-amber-moose
 timeout: 5400
