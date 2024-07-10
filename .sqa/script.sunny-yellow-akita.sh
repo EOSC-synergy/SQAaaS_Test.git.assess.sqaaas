@@ -5,5 +5,5 @@
 
 (
 cd github.com/mattiaBarbo/SQAaaS_Test &&
-    pytest . --json-report --json-report-indent 4
+    licensee detect . --confidence 60 --json 
 )

@@ -5,5 +5,5 @@
 
 (
 cd github.com/mattiaBarbo/SQAaaS_Test &&
-    bandit -f json --quiet  --confidence-level high --severity-level high --recursive .
+    git rev-parse --is-inside-work-tree 
 )

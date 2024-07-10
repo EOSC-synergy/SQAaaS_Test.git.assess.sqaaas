@@ -5,5 +5,5 @@
 
 (
 cd github.com/mattiaBarbo/SQAaaS_Test &&
-    git rev-parse --is-inside-work-tree
+    mdl --json  .
 )

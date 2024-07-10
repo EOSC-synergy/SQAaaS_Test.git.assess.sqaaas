@@ -5,5 +5,5 @@
 
 (
 cd github.com/mattiaBarbo/SQAaaS_Test &&
-    mdl --json .
+    hadolint Dockerfile --failure-threshold error
 )
